@@ -1,10 +1,6 @@
 ---
 title: "R Notebook"
-output:
-  html_document:
-    df_print: paged
-  html_notebook: default
-  word_document: default
+output: rmarkdown::github_document
 ---
 
 ```{r global_options, include=FALSE}
@@ -111,7 +107,7 @@ The results of the Student Test shows that right handed MLB hitters *do not* hit
 
 The results illustrate that not only right handed MLB hitters do not hit more singles on average, but they actually hit less than left handed hitters, with the difference being statistically significant. Here are plotted the results, with 95% confidence intervals:
 
-```{r, results='hold', message=FALSE, error=FALSE, warning=FALSE}
+```{r, echo=FALSE, results='hold', message=FALSE, error=FALSE, warning=FALSE}
 # Group averages
 moy.droitier <- mean(droitier$avgpropsimple)
 moy.gaucher <- mean(gaucher$avgpropsimple)
@@ -153,7 +149,7 @@ In conclusion, after analysing 6048 MLB hitters from 1871 to 2017, we found that
 
 
 ## Appendix
-Lahman Baseball Databank: http://www.seanlahman.com/baseball-archive/statistics/
+Lahman Baseball Databank: http://www.seanlahman.com/baseball-archive/statistics/  
 Original R Script: https://github.com/Guillaume2509/MLBSingleAvg/blob/master/MLBSingleAvg.R
 
 Guillaume Giroux, 2019
